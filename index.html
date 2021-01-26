@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src = "./app.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Mad-Libs</title>
+</head>
+<body>
+  <header>
+    <!-- Mad Libs Logo taken from https://www.logolynx.com/topic/mad+libs#&gid=1&pid=2 -->
+    <img id = "logo" alt = "Mad Libs Logo" src = "./f418de9825ad7b33fea4f174268f9540.jpeg"/>
+    <p> A digital version of the classic game!</p>
+    <button id = "start">Click to Play!</button>
+  </header>
+
+    <form class = "player-input">
+      <p>Enter your words below:</p>
+      <input type = 'text' id = 'entries' placeholder="Part of Speech"/>
+    </form>
+    
+
+    <div class = "story">
+      <button id = 'reveal'>Click To Reveal</button>
+    </div>
+  <footer>
+    <button id = 'again'>Play Again!</button>
+    <p>&copy;2021 William A. Wardlow</p>
+  </footer>
+
+</body>
+</html>
