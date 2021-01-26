@@ -3,7 +3,8 @@ A digital version of the Mad Libs game. Users can create a story with by filling
 
 ## API and Data Sample
 
-The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/random>. Sample below
+The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/random>. Sample below:
+```
 {
     "title": "Three Little Pigs",
     "blanks": [
@@ -61,6 +62,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
         0
     ]
 }
+```
 
 ## Wireframes
  - Mobile Layout: <https://i.imgur.com/eqShqwX.png>
