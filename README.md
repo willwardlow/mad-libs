@@ -65,9 +65,11 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 ```
 
 ## Wireframes
- ![Wireframe - Mobile Layout](Wireframe - Mobile.png)
- 
- ![Wireframe - Desktop Layout](Wireframe - Desktop.png)
+#### Mobile Layout
+ ![Wireframe - Mobile Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Mobile.png)
+
+#### Desktop Layout
+ ![Wireframe - Desktop Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Desktop.png)
  
  
  
@@ -100,7 +102,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 ## Priority Matrix
 
-- ![Priority Matrix](Mad Libs Priority Matrix.png)
+- ![Priority Matrix](https://github.com/willwardlow/mad-libs/blob/main/Mad%20Libs%20Priority%20Matrix.png)
 
 ## Timeframes
 
