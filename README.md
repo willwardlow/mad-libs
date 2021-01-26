@@ -1,5 +1,5 @@
 # Mad-Libs
-A digital version of the Mad Libs game. Users can create a story with by filling in the blanks or selecting from a list of options.
+A digital version of the Mad Libs game. Users can fill out a form and their responses will populate a story. 
 
 ## API and Data Sample
 
@@ -66,10 +66,10 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 ## Wireframes
 #### Mobile Layout
- ![Wireframe - Mobile Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Mobile.png)
+ ![Wireframe - Mobile Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Mobile%20%20v2.png)
 
 #### Desktop Layout
- ![Wireframe - Desktop Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Desktop.png)
+ ![Wireframe - Desktop Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Desktop%20v2.png)
  
  
  
@@ -78,22 +78,22 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 #### MVP 
  - Generate story template from random generate.
- - Allow users to make selections to create a story. 
- - Present finished product to user.
+ - Users will submit a form that will ask the user to provide parts of speech (verb, adverb, adjective, etc) 
+ - A final story will be published showing the text and thrue provided input.
 
 #### PostMVP  
 **Celebrity Tweet Edition.**
-- Use Kanye West tweets from <http://api.kanye.rest> to create Kanye West - themed options.
-- Use Donald Trump tweets from <https://docs.tronalddump.io/> to create Donald Trump - themed options.
-- Provide options for story titles for user to choose from.
+- Kanye West Version : Tweets from <http://api.kanye.rest> will provide context where words will be omitted into blank spaces. The users will fill in those blanks, MadLib style!
+- Donald Trump Edition: Just like the above, but using Donald Trump tweets from <https://docs.tronalddump.io/>.
+- User can select a story prior to playing. (Need to find an API that can support that. )
 
 ## Project Schedule
 
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval | Incomplete
+|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Jan 26| Project Approval | Complete
 |Jan 27| Skeleton HTML Layout with Basic CSS Features | Incomplete
 |Jan 27| Mad Libs Story Generated with Options Created | Incomplete
 |Jan 28| Responsive Design and Advanced CSS Features | Incomplete
