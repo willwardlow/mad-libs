@@ -1,5 +1,5 @@
 # Mad-Libs
-A digital version of the Mad Libs game. Users can create a story with by filling in the blanks or selecting from a list of options.
+A digital version of the Mad Libs game. Users can fill out a form and their responses will populate a story. 
 
 ## API and Data Sample
 
