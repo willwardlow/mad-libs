@@ -94,8 +94,9 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval | Complete
-|Jan 27| Skeleton HTML Layout with Basic CSS Features | Complete
-|Jan 27| Mad Libs Story Generated with Options Created | Incomplete
+|Jan 26| Skeleton HTML Layout with Basic CSS Features | Complete
+|Jan 27| Generate Form Prompting User to Provide Input | Complete
+|Jan 27| Mad Libs Story Generated with User Responses Implemented | Incomplete
 |Jan 28| Responsive Design and Advanced CSS Features | Incomplete
 |Jan 29| MVPs Delivered | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
@@ -108,10 +109,10 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with API - pulling story template | H | 3hrs| 0hrs | 0hrs |
-| JS - Creating Options to Interact with Template | H | 6hrs | 0hrs | 0hrs |
-| JS - User Interactivity | H | 4hrs | 0hrs | 0 hrs|
-| HTML and CSS Design | M | 6hrs | 2hrs | 0 hrs |
+| Working with API - pulling story template | H | 3hrs| 0.5hrs | 0hrs |
+| JS - Created Form to Prompt User Input | H | 6hrs | 4hrs | 0hrs |
+| JS - Publishing Story with Responses| H | 4hrs | 0hrs | 0 hrs|
+| HTML and CSS Design | M | 6hrs | 3hrs | 0 hrs |
 | CSS Responsive Design | M | 2hrs | 0hrs | 0hrs |
 | Debugging and Troubleshooting | L | 6hrs | 0hrs | 0hrs |  
 | Total | H | 27hrs| 0hrs | 0hrs |
