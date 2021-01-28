@@ -8,12 +8,12 @@ const read = document.querySelector('#reveal')
 const getTemplate = async () => {
   try {
     const response = await axios.get(url)
-    
     const prompts = response.data.blanks
     title = response.data.title
-    template = response.data.value
+    // The array below ends with a zero, stripping that off before I proceed with a slice method.
+    template = response.data.value.slice(0, -1)
     enterWords(prompts, 0)
-  
+    console.log(template)
   } catch (error) {
     console.log(error)
   }
@@ -49,27 +49,29 @@ function enterWords(prompts, i) {
     // Removing Label
     request.innerHTML = ''
     // console.log('Now let\'s read your story')
-    return fillIn
     
   }
   writeStory(template,fillIn)
 }
 
 
+// writeStory function joins the two arrays into one complete array.
+
 let story = []
-function writeStory(template, words){
+function writeStory(template, words) {
+  story.length = 0
   for (let i = 0; i < words.length; i++) {
-    story.push(template[i], words[i])
-    // story.push(words[i])
-    // Escape function to return finished story
-    if (story.length === (template.length + words.length)) {
-      return story
-    }
+    story.push(template[i])
+    story.push(words[i])
   }
-  console.log(`Your story is ready!`)
+  console.log(story)
+  // Escape function to return finished story
+  // if (story.length === (template.length + words.length)) {
+  //   console.log(`Your story is ready!`)
+  // }
 }
 
-
+// Showing the story on a click event
 const show = document.querySelector('#reveal')
 const storyTitle = document.createElement('h4')
 const storyText = document.createElement('p')
@@ -80,4 +82,3 @@ show.addEventListener('click', () => {
   page.append(storyTitle)
   page.append(storyText)
 })
-
