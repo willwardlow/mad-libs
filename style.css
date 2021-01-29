@@ -4,6 +4,7 @@
 body{
   background-color: #d1495b;
   font-family: 'Yusei Magic', sans-serif;
+  max-width: 1000px;
 }
 img {
   display: inline-block;
@@ -29,7 +30,6 @@ button {
 }
 
 form {
-  /* visibility: hidden; */
   display: inline-block;
   margin-left: 100px;
   padding: 10px;

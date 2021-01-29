@@ -79,7 +79,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 #### MVP 
  - Generate story template from random generate.
  - Users will submit a form that will ask the user to provide parts of speech (verb, adverb, adjective, etc) 
- - A final story will be published showing the text and thrue provided input.
+ - A final story will be published showing the text and the provided input.
 
 #### PostMVP  
 **Celebrity Tweet Edition.**
@@ -96,7 +96,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 |Jan 26| Project Approval | Complete
 |Jan 26| Skeleton HTML Layout with Basic CSS Features | Complete
 |Jan 27| Generate Form Prompting User to Provide Input | Complete
-|Jan 27| Mad Libs Story Generated with User Responses Implemented | Incomplete
+|Jan 27| Mad Libs Story Generated with User Responses Implemented | Complete
 |Jan 28| Responsive Design and Advanced CSS Features | Incomplete
 |Jan 29| MVPs Delivered | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
@@ -109,12 +109,12 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with API - pulling story template | H | 3hrs| 0.5hrs | 0hrs |
+| Working with API - pulling story template | H | 3hrs| 1hrs | 0hrs |
 | JS - Created Form to Prompt User Input | H | 6hrs | 4hrs | 0hrs |
-| JS - Publishing Story with Responses| H | 4hrs | 0hrs | 0 hrs|
+| JS - Publishing Story with Responses| H | 4hrs | 4hrs | 0 hrs|
 | HTML and CSS Design | M | 6hrs | 3hrs | 0 hrs |
 | CSS Responsive Design | M | 2hrs | 0hrs | 0hrs |
-| Debugging and Troubleshooting | L | 6hrs | 0hrs | 0hrs |  
+| Debugging and Troubleshooting | L | 6hrs | 3hrs | 0hrs |  
 | Total | H | 27hrs| 0hrs | 0hrs |
 
 
@@ -122,6 +122,19 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
+```
+let story = []
+function writeStory(template, words) {
+  story.length = 0
+  for (let i = 0; i < words.length; i++) {
+    story.push(template[i])
+    story.push(words[i])
+  }
+  ```
+
+   - The above code snippet is a function that creates the story after the all user inputs are received. The loop will push each element from both arrays, alternatively. However there was a bug that would repeat the story, while adding new entries, which was a bit frustrating. The ```story.length = 0 ``` line prevents that from occurring. 
+
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
+  - Initially: Input label would disappear after story was created. However, submit button would still be active and "undefined" terms would be added to the story. Deleted the form altogether to prevent that bug from happening and assisting in the flow of the game. 

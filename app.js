@@ -5,6 +5,7 @@ let template
 let title
 const play = document.querySelector('#start')
 const read = document.querySelector('#reveal')
+const form = document.querySelector('.player-input')
 const getTemplate = async () => {
   try {
     const response = await axios.get(url)
@@ -12,7 +13,7 @@ const getTemplate = async () => {
     title = response.data.title
     // The array below ends with a zero, stripping that off before I proceed with a slice method.
     template = response.data.value.slice(0, -1)
-    enterWords(prompts, 0)
+    play.addEventListener('click', enterWords(prompts, 0))
     console.log(template)
   } catch (error) {
     console.log(error)
@@ -46,8 +47,8 @@ function enterWords(prompts, i) {
   }
   // Escape function to notify user of all necessary words are received.
   if (fillIn.length === prompts.length) {
-    // Removing Label
-    request.innerHTML = ''
+    // Removing Label & button
+    form.style.display = 'none'
     // console.log('Now let\'s read your story')
     
   }
@@ -64,6 +65,7 @@ function writeStory(template, words) {
     story.push(template[i])
     story.push(words[i])
   }
+  story.toString()
   console.log(story)
   // Escape function to return finished story
   // if (story.length === (template.length + words.length)) {
@@ -74,6 +76,7 @@ function writeStory(template, words) {
 // Showing the story on a click event
 const show = document.querySelector('#reveal')
 const storyTitle = document.createElement('h4')
+storyTitle.style.textAlign = 'center'
 const storyText = document.createElement('p')
 let page = document.querySelector('.story')
 show.addEventListener('click', () => {
