@@ -15,6 +15,7 @@ const getTemplate = async () => {
     template = response.data.value.slice(0, -1)
     play.addEventListener('click', enterWords(prompts, 0))
     console.log(template)
+    console.log(prompts)
   } catch (error) {
     console.log(error)
   }
@@ -41,6 +42,7 @@ function enterWords(prompts, i) {
     } else {
       fillIn.push(answer.value)
       enterWords(prompts, i += 1)
+      console.log(fillIn)
     }
     // Resetting values before moving on to next item
     answer.value = ''
@@ -61,16 +63,12 @@ function enterWords(prompts, i) {
 let story = []
 function writeStory(template, words) {
   story.length = 0
-  for (let i = 0; i < words.length; i++) {
+  for (let i = 0; i <= words.length; i++) {
     story.push(template[i])
     story.push(words[i])
   }
-  story.toString()
-  console.log(story)
-  // Escape function to return finished story
-  // if (story.length === (template.length + words.length)) {
-  //   console.log(`Your story is ready!`)
-  // }
+  newStory = story.join('')
+  console.log(newStory)
 }
 
 // Showing the story on a click event
@@ -81,7 +79,8 @@ const storyText = document.createElement('p')
 let page = document.querySelector('.story')
 show.addEventListener('click', () => {
   storyTitle.innerHTML = title
-  storyText.innerText = story
+  storyTitle.style.textDecoration = 'underline'
+  storyText.innerHTML = newStory
   page.append(storyTitle)
   page.append(storyText)
 })
