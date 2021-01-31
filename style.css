@@ -6,85 +6,201 @@ body{
   font-family: 'Yusei Magic', sans-serif;
   max-width: 1000px;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 img {
   display: inline-block;
   position: relative;
+  width: 800px;
   margin-top: 40px;
   margin-bottom: 10px;
-  margin-left: 60px;
-  margin-right: 30px;
+  margin-left: 100px;
+  margin-right: 40px;
   border: 2px solid black;
 }
+
+
+header p {
+  position: relative;
+  right: 50px;
+  width: 800px;
+  margin-left: 150px;
+}
+
+#reveal,
 #submit, 
 button {
   background: #ffe066;
   border-radius: 20%;
-  display: inline-block;
-  position: relative;
+  /* display: inline-block; */
+  /* position: relative; */
+}
+
+#reveal:hover,
+#submit:hover,
+button:hover {
+  background: #fdffb6;
 }
 
 #start {
-  margin-left: 650px;
-  bottom: 150px;
+  position: relative;
   padding: 20px;
+  align-self: flex-end;
+  bottom: 250px;
+  left: 10%;
 }
 
 form {
-  display: inline-block;
+  visibility: hidden;
+  display: inline-flex;
+  margin-top: 3%;
   margin-left: 100px;
+  width: 350px;
   padding: 10px;
   border: 2px solid black;
   border-radius: 20%;
   background-color: whitesmoke;
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 2%;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-form p {
-  margin-top: 14px;
+
+label {
+  align-self: flex-start;
+  margin-right:1%;
+  position: relative;
+  margin-left: 10px;
 }
 
 
 div{
-  /* visibility: hidden; */
+  visibility: hidden;
+  max-width: 400px;
   display: inline-block;
   position: relative;
   border: 2px solid black;
-  left: 25%;
   background-color: whitesmoke;
   padding: 20px;
+  left: 20%;
+  top: 20px;
 }
 
 #entries {
-  font-size: 16px;
-}
-
-#submit{
   position: relative;
-  right: 50%;
-  top: 40px;
+  border-color: black;
+  left: 40px;
+  margin-bottom: 10px;
+  bottom: 20px;
 }
 
-header p {
-  margin-left: 150px;
-  
+#alert {
+  text-align: center;
+  display: none;
+}
+
+#submit {
+  position: relative;
+  width: 100px;
 }
 
 #reveal {
-  position: relative;
-  bottom: 80px;
-}
-
-#again {
   visibility: hidden;
   position: relative;
-  left: 25%;
-  top: 150px;
+  left: 40%;
+  bottom: 40px;
+}
+#again {
+  display: none;
+  position: relative;
+  right: 10%;
+  top: 100px;
 }
 
+
+footer {
+  position: relative; 
+  top: 50px;
+}
 footer p {
   position: relative;
-  margin-top: 50%;
-  top: 450%;
+  margin-top: 50px;
   text-align: center;
+}
+
+
+@media screen and (max-width:1400px) {
+  #start {
+    align-self: flex-start;
+    position: relative;
+    top: 30px;
+    left: 20%;
+    margin-bottom: 40px;
+  }
+
+}
+@media screen and (max-width: 1125px) {
+
+  img,
+  header p{
+    width:600px;
+  }
+
+  #reveal {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 950px){
+  div{
+    left: 0%;
+  }
+
+  img {
+    margin-left: 100px;
+  }
+  header p {
+    width: 500px;
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width:750px){
+  img{
+    width: 500px;
+    margin-left: 50px;;
+  }
+
+  #again {
+    right: 30%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 620px){
+  img{
+    margin-left: 50px;
+    width: 400px;
+  }
+
+  header p {
+    margin-left: 100px;
+    width: 400px;
+  }
+
+  div{
+    max-width: 500px;
+    margin-left: 40px;
+    left: 0%;
+  }
+
+  #again{
+    /* position: relative; */
+    left: 40%;
+    margin-bottom: 10px;
+  }
 }
