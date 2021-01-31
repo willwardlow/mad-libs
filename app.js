@@ -1,17 +1,39 @@
+// Madlib API URL
 const url = "http://madlibz.herokuapp.com/api/random"
 
-// Axios Call for Madlib game:
+
+// Variables to use in Axios Call
 let template
 let title
+
+// All relevant DOM Elements:
 const play = document.querySelector('#start')
-const read = document.querySelector('#reveal')
 const form = document.querySelector('.player-input')
+const again = document.querySelector('#again')
+const submit = document.querySelector('#submit')
+let answer = document.querySelector('#entries')
+let request = document.querySelector('label')
+
+// fillIn: array of user choices
+let fillIn = []
+
+// Variable to append both template and user choices:
+let story = []
+
+// Setting up story attributes when appending to div:
+const show = document.querySelector('#reveal')
+const storyTitle = document.createElement('h2')
+storyTitle.style.textAlign = 'center'
+const storyText = document.createElement('p')
+let page = document.querySelector('.story')
+
+// Axios Call for Madlib game:
 const getTemplate = async () => {
   try {
     const response = await axios.get(url)
     const prompts = response.data.blanks
     title = response.data.title
-    // The array below ends with a zero, stripping that off before I proceed with a slice method.
+    // The targeted array has a trailing zero. Stripping off before I begin with a slice method.
     template = response.data.value.slice(0, -1)
     play.addEventListener('click', enterWords(prompts, 0))
     console.log(template)
@@ -20,24 +42,24 @@ const getTemplate = async () => {
     console.log(error)
   }
 }
-getTemplate()
-// writeStory(template,fillIn)
 
-// fillIn: array of user choices
+play.addEventListener('click', () => {
+  getTemplate()
+  form.style.visibility = 'initial'
+  
+})
 
-let fillIn = []
- // Capturing DOM elements
-const submit = document.querySelector('#submit')
-let answer = document.querySelector('#entries')
-let request = document.querySelector('#prompt')
- 
+// enterWords is a function that prompts the user to enter their selections and creating the fillIn array with those choices.
 function enterWords(prompts, i) {
-
-  // Created a click function to push the responses in a array while refreshing the HTML Label. The function will call itself again.
+  
+  // The prompts suppliled by the response will be used for the input label
   request.innerHTML = `${prompts[i]} :`
+  
   submit.onclick = (e) => {
     e.preventDefault()
+    document.querySelector('#alert').style.display = 'none'
     if (answer.value.length === 0) {
+      document.querySelector('#alert').style.display = 'initial'
       console.log('Please enter a word')
     } else {
       fillIn.push(answer.value)
@@ -49,9 +71,9 @@ function enterWords(prompts, i) {
   }
   // Escape function to notify user of all necessary words are received.
   if (fillIn.length === prompts.length) {
-    // Removing Label & button
+    // Form will disapper once all choices have been received.
     form.style.display = 'none'
-    // console.log('Now let\'s read your story')
+    show.style.visibility = 'visible'
     
   }
   writeStory(template,fillIn)
@@ -60,7 +82,7 @@ function enterWords(prompts, i) {
 
 // writeStory function joins the two arrays into one complete array.
 
-let story = []
+
 function writeStory(template, words) {
   story.length = 0
   for (let i = 0; i <= words.length; i++) {
@@ -71,16 +93,20 @@ function writeStory(template, words) {
   console.log(newStory)
 }
 
-// Showing the story on a click event
-const show = document.querySelector('#reveal')
-const storyTitle = document.createElement('h4')
-storyTitle.style.textAlign = 'center'
-const storyText = document.createElement('p')
-let page = document.querySelector('.story')
+// Click event to show story
 show.addEventListener('click', () => {
+  page.style.visibility = 'visible'
   storyTitle.innerHTML = title
   storyTitle.style.textDecoration = 'underline'
   storyText.innerHTML = newStory
   page.append(storyTitle)
   page.append(storyText)
+  show.style.visibility = 'hidden'
+  again.style.display = 'inline-block'
+})
+
+// "Play again" click function to restart game
+again.addEventListener('click', () => {
+  location.reload();
+  
 })
