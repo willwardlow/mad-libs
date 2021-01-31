@@ -97,8 +97,8 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 |Jan 26| Skeleton HTML Layout with Basic CSS Features | Complete
 |Jan 27| Generate Form Prompting User to Provide Input | Complete
 |Jan 27| Mad Libs Story Generated with User Responses Implemented | Complete
-|Jan 28| Responsive Design and Advanced CSS Features | Incomplete
-|Jan 29| MVPs Delivered | Incomplete
+|Jan 28| Responsive Design and Advanced CSS Features | Complete
+|Jan 29| MVPs Delivered | Complete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
@@ -112,9 +112,9 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 | Working with API - pulling story template | H | 3hrs| 1hrs | 0hrs |
 | JS - Created Form to Prompt User Input | H | 6hrs | 4hrs | 0hrs |
 | JS - Publishing Story with Responses| H | 4hrs | 4hrs | 0 hrs|
-| HTML and CSS Design | M | 6hrs | 3hrs | 0 hrs |
-| CSS Responsive Design | M | 2hrs | 0hrs | 0hrs |
-| Debugging and Troubleshooting | L | 6hrs | 3hrs | 0hrs |  
+| HTML and CSS Design | M | 6hrs | 8hrs | 0 hrs |
+| CSS Responsive Design | M | 2hrs | 2hrs | 0hrs |
+| Debugging and Troubleshooting | L | 6hrs | 6hrs | 0hrs |  
 | Total | H | 27hrs| 0hrs | 0hrs |
 
 
@@ -123,18 +123,20 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-let story = []
 function writeStory(template, words) {
   story.length = 0
-  for (let i = 0; i < words.length; i++) {
+  for (let i = 0; i <= words.length; i++) {
     story.push(template[i])
     story.push(words[i])
   }
-  ```
-
+  newStory = story.join('')
+  console.log(newStory)
+}
+```
    - The above code snippet is a function that creates the story after the all user inputs are received. The loop will push each element from both arrays, alternatively. However there was a bug that would repeat the story, while adding new entries, which was a bit frustrating. The ```story.length = 0 ``` line prevents that from occurring. 
 
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
-  - Initially: Input label would disappear after story was created. However, submit button would still be active and "undefined" terms would be added to the story. Deleted the form altogether to prevent that bug from happening and assisting in the flow of the game. 
+  - Initially input label would disappear after story was created. However, submit button would still be active and "undefined" terms would be added to the story. Deleted the form altogether to prevent that bug from happening and assisting in the flow of the game. 
+  - Wanted the form and story div appear side by side when the story was complete. Realized that having some active buttons present would have caused some unforseen edge cases. Decided to have some click events to have either section 'hide' and the 'reappear' when the section was back active.
