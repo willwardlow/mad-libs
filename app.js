@@ -35,7 +35,7 @@ const getTemplate = async () => {
     title = response.data.title
     // The targeted array has a trailing zero. Stripping off before I begin with a slice method.
     template = response.data.value.slice(0, -1)
-    play.addEventListener('click', enterWords(prompts, 0))
+    enterWords(prompts, 0)
   } catch (error) {
     console.log(error)
   }
