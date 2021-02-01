@@ -66,10 +66,10 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 ## Wireframes
 #### Mobile Layout
- ![Wireframe - Mobile Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Mobile%20%20v2.png)
+ ![Wireframe - Mobile Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe-Mobile.png)
 
 #### Desktop Layout
- ![Wireframe - Desktop Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe%20-%20Desktop%20v2.png)
+ ![Wireframe - Desktop Layout](https://github.com/willwardlow/mad-libs/blob/main/Wireframe-Desktop.png)
  
  
  
