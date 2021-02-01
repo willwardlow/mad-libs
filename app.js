@@ -1,5 +1,5 @@
 // Madlib API URL
-const url = "http://madlibz.herokuapp.com/api/random"
+const url = "https://madlibz.herokuapp.com/api/random"
 
 
 // Variables to use in Axios Call
