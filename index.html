@@ -12,24 +12,28 @@
   <header>
     <!-- Mad Libs Logo retrieved from https://www.logolynx.com/topic/mad+libs#&gid=1&pid=2 -->
     <img id = "logo" alt = "Mad Libs Logo" src = "./f418de9825ad7b33fea4f174268f9540.jpeg"/>
-    <p> A digital version of the classic game!</p>
+    <p> A digital version of the classic word game! Answer the prompts to create your own story. Click the start button to begin!</p>
+    
     <button id = "start">Click to Play!</button>
   </header>
 
-    <form class = "player-input">
-      <p>Enter your words below:</p>
-      <label for = 'entries' id = 'prompt'></label>
-      <input type = 'text' id = 'entries' placeholder="Part of Speech"/>
-      <input type = 'submit' id = 'submit' value="Submit Word"/>
-    </form>
+  <form class = "player-input">
+    <p>Enter your words below:</p>
+    <label for = 'entries'></label>
+    <input type = 'text' id = 'entries' placeholder="Part of Speech"/>
+    <p id = 'alert'>Please Enter a Word!</p>
+    <input type = 'submit' id = 'submit' value="Submit Word"/>
+  </form>
+  
 
+  <button id = 'reveal'>Read Your Story!</button>
+  <div class = "story">
 
-    <div class = "story">
-      <button id = 'reveal'>Read Your Story!</button>
-    </div>
+  </div>
+  <button id = 'again'> Play Again! </button>
   <footer>
-    <button id = 'again'>Play Again!</button>
-    <p>&copy;2021 William A. Wardlow</p>
+    <p>&copy;2021 William A. Wardlow </br></br>Credits:</br>
+    <a href = 'http://madlibz.herokuapp.com/api/random'>Mad Lib Random Generator</p></a>
   </footer>
 
 </body>
