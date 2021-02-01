@@ -36,13 +36,12 @@ const getTemplate = async () => {
     // The targeted array has a trailing zero. Stripping off before I begin with a slice method.
     template = response.data.value.slice(0, -1)
     play.addEventListener('click', enterWords(prompts, 0))
-    console.log(template)
-    console.log(prompts)
   } catch (error) {
     console.log(error)
   }
 }
 
+// Start Game click event. 
 play.addEventListener('click', () => {
   getTemplate()
   form.style.visibility = 'initial'
@@ -55,16 +54,15 @@ function enterWords(prompts, i) {
   // The prompts suppliled by the response will be used for the input label
   request.innerHTML = `${prompts[i]} :`
   
+  // Click event when for submit button. Submit button will refresh label and push user input to array
   submit.onclick = (e) => {
     e.preventDefault()
     document.querySelector('#alert').style.display = 'none'
     if (answer.value.length === 0) {
       document.querySelector('#alert').style.display = 'initial'
-      console.log('Please enter a word')
     } else {
       fillIn.push(answer.value)
       enterWords(prompts, i += 1)
-      console.log(fillIn)
     }
     // Resetting values before moving on to next item
     answer.value = ''
@@ -76,24 +74,23 @@ function enterWords(prompts, i) {
     show.style.visibility = 'visible'
     
   }
+
   writeStory(template,fillIn)
 }
 
 
-// writeStory function joins the two arrays into one complete array.
-
-
+// writeStory function joins the two arrays into one complete array. It is called at the end of enterWords(). 
 function writeStory(template, words) {
   story.length = 0
   for (let i = 0; i <= words.length; i++) {
     story.push(template[i])
     story.push(words[i])
   }
+  // When the for loop is finished, there will a lot of commas inside the array, resulting in incoherent sentence structure. the line below strips those commas from the array.
   newStory = story.join('')
-  console.log(newStory)
 }
 
-// Click event to show story
+// Click event to show story. The story is initially invisible then will turn visible when story appears.
 show.addEventListener('click', () => {
   page.style.visibility = 'visible'
   storyTitle.innerHTML = title
@@ -105,7 +102,7 @@ show.addEventListener('click', () => {
   again.style.display = 'inline-block'
 })
 
-// "Play again" click function to restart game
+// "Play again" click function to restart game. When user clicks on "Play Again", the page will refresh
 again.addEventListener('click', () => {
   location.reload();
   
