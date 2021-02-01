@@ -1,5 +1,6 @@
 # Mad-Libs
-A digital version of the Mad Libs game. Users can fill out a form and their responses will populate a story. 
+A digital version of the Mad Libs game. Users can fill out a form and their responses will populate a story.
+Mad-Libs can be played at https://willwardlow.github.io/mad-libs/
 
 ## API and Data Sample
 
