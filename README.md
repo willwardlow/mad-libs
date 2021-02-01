@@ -109,13 +109,13 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with API - pulling story template | H | 3hrs| 1hrs | 0hrs |
-| JS - Created Form to Prompt User Input | H | 6hrs | 4hrs | 0hrs |
-| JS - Publishing Story with Responses| H | 4hrs | 4hrs | 0 hrs|
-| HTML and CSS Design | M | 6hrs | 8hrs | 0 hrs |
-| CSS Responsive Design | M | 2hrs | 2hrs | 0hrs |
-| Debugging and Troubleshooting | L | 6hrs | 6hrs | 0hrs |  
-| Total | H | 27hrs| 0hrs | 0hrs |
+| Working with API - pulling story template | H | 2hrs| 1hrs | 1hrs |
+| JS - Created Form to Prompt User Input | H | 6hrs | 4hrs | 4hrs |
+| JS - Publishing Story with Responses| H | 4hrs | 4hrs | 4hrs|
+| HTML and CSS Design | M | 6hrs | 8hrs | 8hrs |
+| CSS Responsive Design | M | 2hrs | 2hrs | 2hrs |
+| Debugging and Troubleshooting | L | 6hrs | 7hrs | 7hrs |  
+| Total | H | 26hrs| 26hrs | 0hrs |
 
 
 ## Code Snippet
@@ -129,11 +129,12 @@ function writeStory(template, words) {
     story.push(template[i])
     story.push(words[i])
   }
+  // When the for loop is finished, there will a lot of commas inside the array, resulting in incoherent sentence structure. the line below strips those commas from the array.
   newStory = story.join('')
-  console.log(newStory)
 }
 ```
-   - The above code snippet is a function that creates the story after the all user inputs are received. The loop will push each element from both arrays, alternatively. However there was a bug that would repeat the story, while adding new entries, which was a bit frustrating. The ```story.length = 0 ``` line prevents that from occurring. 
+   The above code snippet is a function that creates the story after the all user inputs are received. The loop will push each element from both arrays, alternatively. However there was a bug that would repeat the story, while adding new entries, which was a bit frustrating. The story would appear three times the length of its supposed length. The ```story.length = 0 ``` line prevents that from occurring. 
+   Also, without ```newStory = story.join('')```, the resulting array will appear with a lot of commas in the resulting story, despite numerous ```.toString().split(',')``` commands at the beginning of the script. Hours were spent on correcting this issue and this function was critical for finishing this project.
 
 
 ## Change Log
