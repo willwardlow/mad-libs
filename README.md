@@ -99,7 +99,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 |Jan 27| Mad Libs Story Generated with User Responses Implemented | Complete
 |Jan 28| Responsive Design and Advanced CSS Features | Complete
 |Jan 29| MVPs Delivered | Complete
-|Feb 1| Presentations/Project Submission | Incomplete
+|Feb 1| Presentations/Project Submission | Complete
 
 ## Priority Matrix
 
@@ -115,7 +115,7 @@ The API will be provided by the Mad Libs API: <http://madlibz.herokuapp.com/api/
 | HTML and CSS Design | M | 6hrs | 8hrs | 8hrs |
 | CSS Responsive Design | M | 2hrs | 2hrs | 2hrs |
 | Debugging and Troubleshooting | L | 6hrs | 7hrs | 7hrs |  
-| Total | H | 26hrs| 26hrs | 0hrs |
+| Total | H | 26hrs| 26hrs | 26hrs |
 
 
 ## Code Snippet
